@@ -7,18 +7,60 @@ export default function Stats() {
     ];
 
     return (
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#FDF8E9]">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            {stats.map((stat, index) => (
-              <div key={index} className="w-full sm:w-1/2 md:w-1/4 text-center mb-8 md:mb-0">
-                <div className="flex justify-center mb-4">
-                  <img src="/scissor-icon.svg" alt="Scissor icon" className="w-8 h-8" />
-                </div>
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
+          {/* Flex container for stats and images */}
+          <div className="flex items-center justify-between">
+            {/* First Stat */}
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">{stats[0].number}</div>
+              <div className="text-gray-600">{stats[0].label}</div>
+            </div>
+
+            {/* First Image */}
+            <div className="flex justify-center mx-4">
+              <img
+                src="/images/service1.png"
+                alt="Separator"
+                className="w-16 h-auto"
+              />
+            </div>
+
+            {/* Second Stat */}
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">{stats[1].number}</div>
+              <div className="text-gray-600">{stats[1].label}</div>
+            </div>
+
+            {/* Second Image */}
+            <div className="flex justify-center mx-4">
+              <img
+                src="/images/service1.png"
+                alt="Separator"
+                className="w-16 h-auto"
+              />
+            </div>
+
+            {/* Third Stat */}
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">{stats[2].number}</div>
+              <div className="text-gray-600">{stats[2].label}</div>
+            </div>
+
+            {/* Third Image */}
+            <div className="flex justify-center mx-4">
+              <img
+                src="/images/service1.png"
+                alt="Separator"
+                className="w-16 h-auto"
+              />
+            </div>
+
+            {/* Fourth Stat */}
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">{stats[3].number}</div>
+              <div className="text-gray-600">{stats[3].label}</div>
+            </div>
           </div>
         </div>
       </section>

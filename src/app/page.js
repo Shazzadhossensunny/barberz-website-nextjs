@@ -12,8 +12,8 @@ export default function Home() {
 <Hero></Hero>
 <About></About>
 <Services></Services>
-<Stats></Stats>
 <AppointmentForm></AppointmentForm>
+<Stats></Stats>
 </main>
   );
 }
