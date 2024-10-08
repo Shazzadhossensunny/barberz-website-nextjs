@@ -8,8 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+         gold: '#D4AF37',
+        'gold-dark': '#B4941F',
+      },
+      container: {
+        center: true,
+        padding: '1rem',
       },
     },
   },
