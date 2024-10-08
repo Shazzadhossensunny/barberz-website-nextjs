@@ -46,8 +46,8 @@ export default function Services() {
               <Image
                 src="/images/shape.png"
                 alt="Shape"
-                width={40} // Adjust width as needed
-                height={10} // Adjust height as needed
+                width={40}
+                height={10}
               />
             </div>
 
