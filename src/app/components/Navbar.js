@@ -1,18 +1,18 @@
-'use client'
-import { Phone, Mail, Facebook, Twitter, Dribbble, Youtube, ChevronDown } from 'lucide-react'; // ChevronDown added for the dropdown arrow
+'use client';
+import { Phone, Mail, Facebook, Twitter, Dribbble, Youtube, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion'; // Import framer-motion for animation
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false); // Dropdown open state
-  const [rotateArrow, setRotateArrow] = useState(false); // State to rotate arrow
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [rotateArrow, setRotateArrow] = useState(false);
 
   const handleServicesClick = () => {
     setIsServicesOpen(!isServicesOpen);
-    setRotateArrow(!rotateArrow); // Toggle arrow rotation
+    setRotateArrow(!rotateArrow);
   };
 
   return (
@@ -43,7 +43,6 @@ export default function Navbar() {
         <nav className="flex justify-between items-center py-4">
           {/* Left side menu */}
           <div className="flex-1 hidden md:flex justify-start space-x-8 text-white">
-            {/* Inactive Links */}
             <Link href="#" className="relative hover:text-[#D5A353] transition-colors group">
               Home
               <span className="absolute inset-x-0 bottom-0 h-0.5 bg-transparent group-hover:bg-[#D5A353] transition-all"></span>
@@ -52,7 +51,7 @@ export default function Navbar() {
             {/* Services with dropdown (opens on click only) */}
             <div className="relative">
               <div
-                onClick={handleServicesClick} // Toggle dropdown on click
+                onClick={handleServicesClick}
                 className="flex items-center space-x-1 cursor-pointer hover:text-[#D5A353] transition-colors relative group"
               >
                 <Link href="#">
@@ -141,7 +140,33 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden flex flex-col items-center space-y-4 text-white bg-black bg-opacity-80 py-4">
             <Link href="#" className="hover:text-[#D5A353] transition-colors">Home</Link>
-            <Link href="#" className="hover:text-[#D5A353] transition-colors">Services</Link>
+
+            {/* Mobile Services Dropdown */}
+            <div >
+              <div
+                onClick={handleServicesClick}
+                className="flex justify-between items-center cursor-pointer w-full px-4 hover:text-[#D5A353] transition-colors"
+              >
+                <span>Services</span>
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${rotateArrow ? 'rotate-180' : 'rotate-0'}`}
+                />
+              </div>
+
+              {isServicesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="flex flex-col mt-2 space-y-2 bg-black bg-opacity-90"
+                >
+                  <Link href="#" className="block px-4 py-2 hover:text-[#D5A353] transition-colors">Haircut</Link>
+                  <Link href="#" className="block px-4 py-2 hover:text-[#D5A353] transition-colors">Beard Styling</Link>
+                  <Link href="#" className="block px-4 py-2 hover:text-[#D5A353] transition-colors">Grooming</Link>
+                </motion.div>
+              )}
+            </div>
+
             <Link href="#" className="hover:text-[#D5A353] transition-colors">About Us</Link>
             <Link href="#" className="hover:text-[#D5A353] transition-colors">Team</Link>
             <Link href="#" className="hover:text-[#D5A353] transition-colors">Booking</Link>
