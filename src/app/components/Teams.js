@@ -78,7 +78,7 @@ export default function Teams() {
             </div>
 
             {/* Right line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
           </div>
         </motion.div>
 

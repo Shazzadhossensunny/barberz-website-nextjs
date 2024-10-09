@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Barberz - Salon Website
 
-## Getting Started
+Barberz is a sleek and modern salon website built with **Next.js**, featuring stunning animations and responsive design. The site incorporates **Tailwind CSS** for styling, **Framer Motion** for smooth animations, and **Swiper.js** for interactive carousels. It is a perfect platform for showcasing barber services, featuring team members, and booking appointments.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Responsive Design**: Fully responsive across all devices.
+- **Animations**: Fluid animations using **Framer Motion**.
+- **Interactive Carousel**: Swipeable team members and service slides with **Swiper.js**.
+- **Headless UI**: Accessible and customizable UI components.
+- **Next.js**: Server-side rendering and static site generation.
+- **Lucide Icons**: Custom icons from **Lucide-react**.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+- **Next.js**: Framework for building the app.
+- **React.js**: JavaScript library for building UI.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Framer Motion**: Animation library for React.
+- **Swiper.js**: Carousel for displaying team members and services.
+- **Headless UI**: Unstyled, accessible UI components.
+- **Lucide-react**: Icon library for React.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/Shazzadhossensunny/barberz-website-nextjs
 
-## Deploy on Vercel
+   cd barberz-website-nextjs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   npm run dev
+
+   http://localhost:3000
+   ```
