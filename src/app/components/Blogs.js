@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useEffect, useState } from 'react';
 import BlogPostCard from './BlogPostCard';
+import Image from 'next/image';
 
 const blogPosts = [
     {
@@ -47,10 +48,24 @@ export default function Blogs() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-[#FFD700] text-xl mb-2">NEWS FROM BLOG</h2>
-          <h3 className="text-4xl font-serif mb-4">What's On Our Mind</h3>
-          <div className="flex justify-center">
-            <Scissors className="text-[#FFD700]" size={32} />
+          <h2 className="text-2xl md:text-3xl mb-2 text-gold-dark">NEWS FROM BLOG</h2>
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">What's On Our Mind</h3>
+          <div className="flex items-center justify-center mb-8">
+            {/* Left line */}
+            <div className="h-[2px] bg-gold-dark w-16"></div>
+
+            {/* Center image */}
+            <div className="mx-4">
+              <Image
+                src="/images/shape.png"
+                alt="Shape"
+                width={40}
+                height={10}
+              />
+            </div>
+
+            {/* Right line */}
+            <div className="h-[2px] bg-gold-dark w-16"></div>
           </div>
         </motion.div>
 

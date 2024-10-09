@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { Calendar, User, Scissors } from 'lucide-react';
+import Image from 'next/image';
 export default function BlogPostCard({ title, date, category, author, image }) {
   return (
     <motion.div
@@ -10,26 +10,30 @@ export default function BlogPostCard({ title, date, category, author, image }) {
       className="bg-white rounded-lg overflow-hidden shadow-lg"
     >
       <div className="relative">
-        <img src={image} alt={title} className="w-full h-48 object-cover" />
-        <div className="absolute bottom-0 right-0 bg-[#FFD700] text-black px-4 py-2">
+        <div className="relative w-full h-64">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute bottom-0 translate-y-1/2 right-0 bg-[#D4A853] text-black px-4 py-2 text-center">
           <span className="block text-center font-bold">{date.split(' ')[0]}</span>
           <span className="block text-center">{date.split(' ')[1]}</span>
         </div>
       </div>
-      <div className="p-6">
-        <div className="flex items-center text-sm text-gray-600 mb-2">
-          <div className="flex items-center mr-4">
-            <User size={16} className="mr-1" />
-            {category} / BY {author}
+      <div className="p-6 pt-8">
+      <div className="flex items-center mb-4">
+          <div className="w-1 h-12 bg-[#D4A853] mr-4"></div>
+          <div>
+            <p className="text-gray-600 text-sm mb-1">{category} / BY {author}</p>
+            <h4 className="text-xl font-bold">{title}</h4>
           </div>
         </div>
-        <h4 className="text-xl font-bold mb-2">{title}</h4>
         <p className="text-gray-600 mb-4">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. velit officia consequat duis enim velit mollit.
         </p>
-        <button className="text-[#B8860B] font-semibold hover:text-[#FFD700] transition-colors duration-300">
-          Read More
-        </button>
       </div>
     </motion.div>
   )

@@ -11,13 +11,16 @@ const testimonials = [
       name: 'Robert Fox',
       role: 'Writer',
       image: '/images/client1.png',
-      text: 'Just Came Back To Home And Should Say That It Is Definitely A Great Experience. I Would Recommend It For Everyone Who Needs A Bike For A Short Term Or Want To T...'
+      text: 'Just Came Back To Home And Should Say That It Is Definitely A Great Experience. I Would Recommend It For Everyone Who Needs A Bike For A Short Term Or Want To T...',
+      rating : 4
+
     },
     {
       name: 'Marvin McKinney',
       role: 'Businessman',
       image: '/images/client2.png',
-      text: 'Amazing Service! Claire Helped Me To Reduce The Shipping Price A Little And Shipped It Immediately After Purchasing. The Amethyst Cave I Got Is A Beauty And I C...'
+      text: 'Amazing Service! Claire Helped Me To Reduce The Shipping Price A Little And Shipped It Immediately After Purchasing. The Amethyst Cave I Got Is A Beauty And I C...',
+      rating : 5
     }
 ];
 
@@ -39,11 +42,11 @@ export default function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center text-white"
         >
-          <h2 className="text-4xl font-bold mb-2">Testimonial</h2>
-          <h3 className="text-3xl font-bold mb-4">Hear from our customers</h3>
+          <h2 className="text-2xl md:text-3xl mb-2 text-gold-dark">Testimonial</h2>
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">Hear from our customers</h3>
           <div className="flex items-center justify-center mb-8">
             {/* Left line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
 
             {/* Center image */}
             <div className="mx-4">
@@ -56,7 +59,7 @@ export default function Testimonials() {
             </div>
 
             {/* Right line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
           </div>
         </motion.div>
 

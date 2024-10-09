@@ -1,4 +1,4 @@
-"use client"; // This marks the component as a client component
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -35,11 +35,11 @@ export default function Services() {
       <div className="container mx-auto px-4">
         {/* Section heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-2">SERVICES</h2>
-          <h3 className="text-3xl font-bold mb-4">Our Services</h3>
+          <h2 className="text-2xl md:text-3xl mb-2 text-gold-dark">SERVICES</h2>
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h3>
           <div className="flex items-center justify-center mb-8">
             {/* Left line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
 
             {/* Center image */}
             <div className="mx-4">
@@ -52,7 +52,7 @@ export default function Services() {
             </div>
 
             {/* Right line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
           </div>
         </div>
 
@@ -63,8 +63,10 @@ export default function Services() {
               key={index}
               className="bg-white p-8 rounded-lg shadow-lg text-center"
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }} // Delay for staggered effect
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              whileHover={{ scale: 1.05 }}
+              viewport={{ once: false }}
             >
               <div className="mb-4">
                 <Image
@@ -77,7 +79,7 @@ export default function Services() {
               </div>
               <h4 className="text-xl font-bold mb-4">{service.title}</h4>
               <p className="text-gray-600 mb-6">{service.description}</p>
-              <button className="text-gold border border-gold px-6 py-2 rounded hover:bg-gold hover:text-white transition-colors">
+              <button className="text-gold-dark border border-gold-dark px-6 py-2 rounded hover:bg-gold hover:text-white transition-colors">
                 READ MORE
               </button>
             </motion.div>

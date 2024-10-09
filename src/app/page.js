@@ -2,6 +2,7 @@ import About from "./components/About";
 import AppointmentForm from "./components/AppointmentForm";
 import Blogs from "./components/Blogs";
 import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import OurClients from "./components/OurClients";
@@ -28,6 +29,7 @@ export default function Home() {
 <Blogs></Blogs>
 <OurClients></OurClients>
 <OurWork></OurWork>
+<Footer></Footer>
 </main>
   );
 }

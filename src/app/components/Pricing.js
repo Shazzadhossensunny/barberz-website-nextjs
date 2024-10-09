@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
-import { Scissors } from 'lucide-react';
+import Image from 'next/image';
 const services = [
     { name: 'Hair Cut', price: 10 },
     { name: 'Hair Styling', price: 25 },
@@ -21,10 +21,24 @@ export default function Pricing() {
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl font-serif mb-4">Barbershop Pricing Plan</h2>
-        <div className="flex justify-center">
-          <Scissors className="text-[#FFD700]" size={32} />
-        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Barbershop Pricing Plan</h2>
+        <div className="flex items-center justify-center mb-8">
+            {/* Left line */}
+            <div className="h-[2px] bg-gold-dark w-16"></div>
+
+            {/* Center image */}
+            <div className="mx-4">
+              <Image
+                src="/images/shape.png"
+                alt="Shape"
+                width={40}
+                height={10}
+              />
+            </div>
+
+            {/* Right line */}
+            <div className="h-[2px] bg-gold-dark w-16"></div>
+          </div>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -52,9 +66,14 @@ export default function Pricing() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="text-center mt-12"
       >
-        <button className="bg-[#FFD700] text-black px-8 py-3 rounded hover:bg-[#B8860B] transition-colors duration-300">
+        <motion.button className="bg-gold-dark text-white px-8 py-3 rounded hover:bg-[#B8860B] transition-colors duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400 }}
+
+        >
           VIEW MORE
-        </button>
+        </motion.button>
       </motion.div>
     </div>
   </section>

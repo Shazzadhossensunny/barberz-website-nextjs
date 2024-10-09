@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         gold: '#FFD700',
-        'gold-dark': '#B8860B',
+        'gold-dark': '#D9A536',
       },
       container: {
         center: true,

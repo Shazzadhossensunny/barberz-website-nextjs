@@ -17,10 +17,10 @@ export default function OurWork() {
       <div className="container mx-auto px-4">
         {/* Section heading */}
         <div className="text-center mb-16">
-          <h3 className="text-3xl font-bold mb-4">Our Works</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-6">Our Works</h3>
           <div className="flex items-center justify-center mb-8">
             {/* Left line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
 
             {/* Center image */}
             <div className="mx-4">
@@ -33,17 +33,16 @@ export default function OurWork() {
             </div>
 
             {/* Right line */}
-            <div className="h-[2px] bg-[#D9A536] w-16"></div>
+            <div className="h-[2px] bg-gold-dark w-16"></div>
           </div>
         </div>
 
         {/* Clients container */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ staggerChildren: 0.2 }}
+          initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
         >
           {works.map((work, index) => (
             <motion.div
@@ -59,7 +58,7 @@ export default function OurWork() {
                 src={work.image}
                 alt="work"
                 fill
-                className="object-cover object-center"
+                className="object-cover w-full h-full object-center"
               />
             </motion.div>
           ))}
